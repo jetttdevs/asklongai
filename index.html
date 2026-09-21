@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ask Long — AI Onchain Checker</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+  :root { --accent-green: #33D17A; --accent-violet: #8B6BFF; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #0A120C; font-family: 'IBM Plex Sans', sans-serif; }
+  a { text-decoration: none; }
+  .adx-nav-link { color: #9CA3AF; }
+  .adx-nav-link:hover { color: #F5F6F8; }
+  .adx-btn-primary:hover { background: #26CE92; }
+  .adx-btn-ghost:hover { border-color: rgba(255,255,255,0.35); color: #F5F6F8; }
+  .adx-card:hover { border-color: rgba(51,209,122,0.35); transform: translateY(-2px); }
+  .adx-card { transition: transform 160ms ease, border-color 160ms ease; }
+  @media (max-width: 900px) {
+    .adx-grid-6, .adx-grid-4, .adx-grid-3 { grid-template-columns: 1fr !important; }
+    .adx-hero-row { flex-direction: column !important; }
+    .adx-tokenomics-row { flex-direction: column !important; }
+  }
+</style>
+</head>
+<body>
+
+<div style="width: 100%; min-height: 100vh; box-sizing: border-box; background: #0A120C; color: #F5F6F8; font-family: 'IBM Plex Sans', sans-serif; display: flex; flex-direction: column;">
+
+  <!-- NAV -->
+  <div style="position: sticky; top: 0; z-index: 20; width: 100%; box-sizing: border-box; background: rgba(10,18,12,0.85); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.08);">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 18px 32px; display: flex; align-items: center; justify-content: space-between;">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <img src="logo.svg" alt="Ask Long logo" style="width: 32px; height: 32px; border-radius: 9px; object-fit: cover; border: 1px solid rgba(51,209,122,0.30);">
+        <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 17px; letter-spacing: -0.01em;">Ask Long</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 28px;">
+        <a href="#features" class="adx-nav-link" style="font-size: 14px; font-weight: 500;">Features</a>
+        <a href="#how-it-works" class="adx-nav-link" style="font-size: 14px; font-weight: 500;">How It Works</a>
+        <a href="#tokenomics" class="adx-nav-link" style="font-size: 14px; font-weight: 500;">Tokenomics</a>
+      </div>
+      <a href="https://x.com/AskLongAI" target="_blank" rel="noopener" class="adx-btn-primary" style="background: var(--accent-green); color: #04140E; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 14px; padding: 10px 20px; border-radius: 8px;">Tag @AskLongAI</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div style="width: 100%; box-sizing: border-box; padding: 96px 32px 88px; background: radial-gradient(ellipse 900px 500px at 50% -10%, rgba(139,107,255,0.16), transparent), radial-gradient(ellipse 700px 400px at 90% 10%, rgba(51,209,122,0.10), transparent);">
+    <div style="max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 24px;">
+      <div style="display: flex; align-items: center; gap: 8px; padding: 7px 14px; border-radius: 999px; border: 1px solid rgba(51,209,122,0.35); background: rgba(51,209,122,0.08);">
+        <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent-green);"></span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.04em; color: var(--accent-green);">AI ONCHAIN CHECKER · ROBINHOOD CHAIN</span>
+      </div>
+      <h1 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 60px; line-height: 1.05; letter-spacing: -0.02em;">Ask Long</h1>
+      <p style="margin: 0; max-width: 620px; font-size: 19px; line-height: 1.6; color: #C7CAD1;">The AI agent that reads Robinhood Chain onchain data before you do — purpose-built for tokens listed under <span style="color: #F5F6F8; font-weight: 600;">Ask Long By Tag</span>.</p>
+      <p style="margin: 0; max-width: 560px; font-size: 15px; line-height: 1.7; color: #8B90A0;">Tag <span style="color: var(--accent-green); font-family: 'IBM Plex Mono', monospace;">@AskLongAI</span> on X with "analyze this CA" and Ask Long scans liquidity, holder concentration, contract risk and tag authenticity in seconds — turning raw onchain noise into a plain-English verdict, right in the reply.</p>
+      <div style="display: flex; gap: 14px; margin-top: 8px;">
+        <a href="https://x.com/AskLongAI" target="_blank" rel="noopener" class="adx-btn-primary" style="background: var(--accent-green); color: #04140E; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 15px; padding: 14px 26px; border-radius: 10px;">Tag @AskLongAI on X</a>
+        <a href="#tokenomics" class="adx-btn-ghost" style="border: 1px solid rgba(255,255,255,0.16); color: #C7CAD1; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 15px; padding: 14px 26px; border-radius: 10px;">Read the Tokenomics</a>
+      </div>
+      <div style="display: flex; gap: 32px; margin-top: 28px; flex-wrap: wrap; justify-content: center;">
+        <div style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: #8B90A0;"><span style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent-green);"></span>24/7 Onchain Monitoring</div>
+        <div style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: #8B90A0;"><span style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent-green);"></span>Native to Robinhood Chain</div>
+        <div style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: #8B90A0;"><span style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent-green);"></span>Ask Long By Tag Verified</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- X REPLY PREVIEW -->
+  <div style="width: 100%; box-sizing: border-box; padding: 0 32px 96px;">
+    <div style="max-width: 640px; margin: 0 auto; display: flex; flex-direction: column; gap: 0;">
+
+      <div style="border: 1px solid rgba(255,255,255,0.10); border-radius: 16px 16px 0 0; border-bottom: none; background: #101B14; padding: 18px 20px; display: flex; gap: 12px;">
+        <div style="width: 38px; height: 38px; border-radius: 50%; background: #2A2E36; flex-shrink: 0;"></div>
+        <div style="display: flex; flex-direction: column; gap: 4px;">
+          <div style="display: flex; align-items: center; gap: 6px; font-size: 13.5px;"><span style="color: #F5F6F8; font-weight: 600;">degen_trader</span><span style="color: #6B7080;">@degen_trader</span></div>
+          <div style="font-size: 14px; line-height: 1.55; color: #E7E9ED;"><span style="color: var(--accent-green);">@AskLongAI</span> analyze this CA: <span style="font-family: 'IBM Plex Mono', monospace; color: #C7CAD1;">0x71C...9a3F</span></div>
+        </div>
+      </div>
+
+      <div style="border: 1px solid rgba(255,255,255,0.10); border-radius: 0 0 16px 16px; background: #0D1712; padding: 18px 20px; display: flex; gap: 12px; box-shadow: 0 30px 80px -30px rgba(139,107,255,0.25);">
+        <img src="logo.svg" alt="Ask Long" style="width: 38px; height: 38px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 1px solid rgba(51,209,122,0.30);">
+        <div style="display: flex; flex-direction: column; gap: 8px; flex: 1;">
+          <div style="display: flex; align-items: center; gap: 6px; font-size: 13.5px;"><span style="color: #F5F6F8; font-weight: 600;">Ask Long</span><span style="color: var(--accent-green);">✓</span><span style="color: #6B7080;">@AskLongAI</span></div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; line-height: 1.9; color: #B7BBC6;">
+            <div>contract risk&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: var(--accent-green);">no mint function · ownership renounced</span></div>
+            <div>liquidity lock&nbsp;&nbsp;&nbsp;<span style="color: var(--accent-green);">locked · verified onchain</span></div>
+            <div>tag match&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: var(--accent-green);">Ask Long By Tag confirmed</span></div>
+            <div>risk score&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: var(--accent-violet); font-weight: 600;">[X]/100 — report ready</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PROBLEM -->
+  <div style="width: 100%; box-sizing: border-box; padding: 20px 32px 100px; border-top: 1px solid rgba(255,255,255,0.06);">
+    <div style="max-width: 1000px; margin: 0 auto; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 16px;">
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: var(--accent-violet);">THE PROBLEM</span>
+      <h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 34px; line-height: 1.3; max-width: 720px;">Ask Long By Tag moves fast. Most buyers don't check first.</h2>
+      <p style="margin: 0; max-width: 680px; font-size: 16px; line-height: 1.7; color: #9CA3AF;">New tags launch on Robinhood Chain every day, and hype spreads faster than due diligence. Fake tags, unlocked liquidity and concentrated holder wallets are easy to hide behind a good ticker — unless something is reading the chain in real time.</p>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <div id="features" style="width: 100%; box-sizing: border-box; padding: 20px 32px 100px; background: #0E1712; border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06);">
+    <div style="max-width: 1180px; margin: 0 auto;">
+      <div style="text-align: center; display: flex; flex-direction: column; align-items: center; gap: 14px; margin-bottom: 56px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: var(--accent-green);">WHAT IT DOES</span>
+        <h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 34px;">One AI agent, the full onchain picture</h2>
+        <p style="margin: 0; max-width: 600px; font-size: 15px; color: #9CA3AF;">Every check runs directly against Robinhood Chain — no manual explorer digging.</p>
+      </div>
+      <div class="adx-grid-6" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px;">
+
+        <div class="adx-card" style="background: #132018; border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 26px; display: flex; flex-direction: column; gap: 12px;">
+          <div style="width: 38px; height: 38px; border-radius: 10px; background: rgba(51,209,122,0.12); display: flex; align-items: center; justify-content: center;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#33D17A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+          </div>
+          <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 16px;">Contract Risk Scan</div>
+          <div style="font-size: 13.5px; line-height: 1.6; color: #9CA3AF;">Detects hidden mint functions, unrenounced ownership, fee traps and honeypot patterns before you sign a transaction.</div>
+        </div>
+
+        <div class="adx-card" style="background: #132018; border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 26px; display: flex; flex-direction: column; gap: 12px;">
+          <div style="width: 38px; height: 38px; border-radius: 10px; background: rgba(139,107,255,0.14); display: flex; align-items: center; justify-content: center;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8B6BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41L13.42 20.6a2 2 0 01-2.83 0L2.59 12.6a2 2 0 010-2.83l7.17-7.17a2 2 0 012.83 0l7.99 7.99a2 2 0 010 2.83z"/><circle cx="8.5" cy="8.5" r="1.5"/></svg>
+          </div>
+          <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 16px;">Ask Long By Tag Verification</div>
+          <div style="font-size: 13.5px; line-height: 1.6; color: #9CA3AF;">Confirms a token's tag genuinely matches its onchain contract and original creator wallet, catching spoofed tags before you trade.</div>
+        </div>
+
+        <div class="adx-card" style="background: #132018; border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 26px; display: flex; flex-direction: column; gap: 12px;">
+          <div style="width: 38px; height: 38px; border-radius: 10px; background: rgba(51,209,122,0.12); display: flex; align-items: center; justify-content: center;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#33D17A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          </div>
+          <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 16px;">Liquidity &amp; Lock Check</div>
+          <div style="font-size: 13.5px; line-height: 1.6; color: #9CA3AF;">Reads LP lock status, pool size and unlock date directly from Robinhood Chain, so rug risk is visible before it happens.</div>
+        </div>
+
+        <div class="adx-card" style="background: #132018; border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 26px; display: flex; flex-direction: column; gap: 12px;">
+          <div style="width: 38px; height: 38px; border-radius: 10px; background: rgba(139,107,255,0.14); display: flex; align-items: center; justify-content: center;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8B6BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4"/><path d="M2 21v-2a4 4 0 014-4h6a4 4 0 014 4v2"/><circle cx="18" cy="7" r="3"/></svg>
+          </div>
+          <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 16px;">Holder Distribution</div>
+          <div style="font-size: 13.5px; line-height: 1.6; color: #9CA3AF;">Maps top wallets and clustered addresses to flag whale concentration and coordinated wallets in seconds.</div>
+        </div>
+
+        <div class="adx-card" style="background: #132018; border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 26px; display: flex; flex-direction: column; gap: 12px;">
+          <div style="width: 38px; height: 38px; border-radius: 10px; background: rgba(51,209,122,0.12); display: flex; align-items: center; justify-content: center;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#33D17A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+          </div>
+          <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 16px;">Real-Time Alerts</div>
+          <div style="font-size: 13.5px; line-height: 1.6; color: #9CA3AF;">Flags large sells, LP pulls and ownership changes the moment they hit the chain, not after the damage is done.</div>
+        </div>
+
+        <div class="adx-card" style="background: #132018; border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 26px; display: flex; flex-direction: column; gap: 12px;">
+          <div style="width: 38px; height: 38px; border-radius: 10px; background: rgba(139,107,255,0.14); display: flex; align-items: center; justify-content: center;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8B6BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4 12.5-12.5z"/></svg>
+          </div>
+          <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 16px;">Plain-English Risk Score</div>
+          <div style="font-size: 13.5px; line-height: 1.6; color: #9CA3AF;">Every scan compresses into one 0–100 score and a short written verdict — no dashboard literacy required.</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <div id="how-it-works" style="width: 100%; box-sizing: border-box; padding: 100px 32px;">
+    <div style="max-width: 1080px; margin: 0 auto;">
+      <div style="text-align: center; display: flex; flex-direction: column; align-items: center; gap: 14px; margin-bottom: 56px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: var(--accent-green);">HOW IT WORKS</span>
+        <h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 34px;">From a tag on X to a verdict in the reply</h2>
+      </div>
+      <div class="adx-grid-4" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px;">
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 28px; color: var(--accent-green);">01</div>
+          <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 16px;">Tag @AskLongAI on X</div>
+          <div style="font-size: 13.5px; line-height: 1.6; color: #9CA3AF;">Reply to any post with <span style="color: #F5F6F8;">@AskLongAI analyze this CA</span> and the contract address.</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 28px; color: var(--accent-green);">02</div>
+          <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 16px;">Ask Long pulls live data</div>
+          <div style="font-size: 13.5px; line-height: 1.6; color: #9CA3AF;">The agent reads contract code, liquidity pools and holder activity straight from the chain.</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 28px; color: var(--accent-green);">03</div>
+          <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 16px;">AI cross-checks every signal</div>
+          <div style="font-size: 13.5px; line-height: 1.6; color: #9CA3AF;">Contract risk, liquidity health, holder concentration and tag authenticity are scored together.</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 28px; color: var(--accent-green);">04</div>
+          <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 16px;">Get the reply</div>
+          <div style="font-size: 13.5px; line-height: 1.6; color: #9CA3AF;">Ask Long replies on X with a risk score and full breakdown in seconds.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOKENOMICS -->
+  <div id="tokenomics" style="width: 100%; box-sizing: border-box; padding: 100px 32px; background: #0E1712; border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06);">
+    <div style="max-width: 1080px; margin: 0 auto;">
+      <div style="text-align: center; display: flex; flex-direction: column; align-items: center; gap: 14px; margin-bottom: 56px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: var(--accent-violet);">TOKENOMICS</span>
+        <h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 34px;">Built to compound, not dilute</h2>
+        <p style="margin: 0; max-width: 620px; font-size: 15px; color: #9CA3AF;">Every fee Ask Long generates flows back into the token in two directions — that's the whole allocation.</p>
+      </div>
+
+      <div class="adx-tokenomics-row" style="display: flex; align-items: center; justify-content: center; gap: 72px;">
+        <div style="position: relative; width: 260px; height: 260px; flex-shrink: 0;">
+          <div style="width: 260px; height: 260px; border-radius: 50%; background: conic-gradient(var(--accent-green) 0deg 288deg, var(--accent-violet) 288deg 360deg);"></div>
+          <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 168px; height: 168px; border-radius: 50%; background: #0E1712; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;">
+            <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 30px;">80 / 20</div>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8B90A0; letter-spacing: 0.04em;">FEE SPLIT</div>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 20px; max-width: 440px;">
+          <div style="display: flex; gap: 16px; align-items: flex-start;">
+            <div style="width: 14px; height: 14px; border-radius: 4px; background: var(--accent-green); margin-top: 4px; flex-shrink: 0;"></div>
+            <div>
+              <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 18px; margin-bottom: 4px;">80% Buyback &amp; Burn</div>
+              <div style="font-size: 14px; line-height: 1.65; color: #9CA3AF;">The majority of every fee is used to buy $ASK back from the open market and burn it permanently — continuously tightening circulating supply as usage grows.</div>
+            </div>
+          </div>
+          <div style="display: flex; gap: 16px; align-items: flex-start;">
+            <div style="width: 14px; height: 14px; border-radius: 4px; background: var(--accent-violet); margin-top: 4px; flex-shrink: 0;"></div>
+            <div>
+              <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 18px; margin-bottom: 4px;">20% Token Development</div>
+              <div style="font-size: 14px; line-height: 1.65; color: #9CA3AF;">The remainder funds the AI agent — onchain data infrastructure, model upgrades and new Ask Long By Tag integrations on Robinhood Chain.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="adx-grid-3" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 56px;">
+        <div style="background: #132018; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 20px; text-align: center;">
+          <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; color: var(--accent-green);">[TOKEN SUPPLY]</div>
+          <div style="font-size: 12.5px; color: #9CA3AF; margin-top: 6px;">Total $ASK Supply</div>
+        </div>
+        <div style="background: #132018; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 20px; text-align: center;">
+          <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; color: var(--accent-green);">Onchain Verifiable</div>
+          <div style="font-size: 12.5px; color: #9CA3AF; margin-top: 6px;">Every Burn Publicly Trackable</div>
+        </div>
+        <div style="background: #132018; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 20px; text-align: center;">
+          <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; color: var(--accent-green);">100% Utility-Funded</div>
+          <div style="font-size: 12.5px; color: #9CA3AF; margin-top: 6px;">No Allocation Outside the Split</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHY ROBINHOOD CHAIN -->
+  <div style="width: 100%; box-sizing: border-box; padding: 100px 32px;">
+    <div class="adx-hero-row" style="max-width: 1080px; margin: 0 auto; display: flex; gap: 56px; align-items: center;">
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 16px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: var(--accent-green);">WHY ROBINHOOD CHAIN</span>
+        <h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 30px; line-height: 1.3;">Built for one chain. Focused on one launch format.</h2>
+        <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #9CA3AF;">Ask Long isn't a generic multi-chain scanner. It's tuned specifically to how Robinhood Chain indexes contracts and how Ask Long By Tag issues and verifies tags — so the checks are precise, fast, and built for how tokens actually launch here.</p>
+      </div>
+      <div style="flex: 1; background: #132018; border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 16px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; font-size: 13.5px;"><span style="color: #9CA3AF;">Chain</span><span style="font-family: 'IBM Plex Mono', monospace; color: #F5F6F8;">Robinhood Chain</span></div>
+        <div style="height: 1px; background: rgba(255,255,255,0.08);"></div>
+        <div style="display: flex; justify-content: space-between; align-items: center; font-size: 13.5px;"><span style="color: #9CA3AF;">Agent</span><span style="font-family: 'IBM Plex Mono', monospace; color: #F5F6F8;">Ask Long</span></div>
+        <div style="height: 1px; background: rgba(255,255,255,0.08);"></div>
+        <div style="display: flex; justify-content: space-between; align-items: center; font-size: 13.5px;"><span style="color: #9CA3AF;">Token</span><span style="font-family: 'IBM Plex Mono', monospace; color: var(--accent-green);">$ASK</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div id="launch" style="width: 100%; box-sizing: border-box; padding: 80px 32px; background: radial-gradient(ellipse 700px 320px at 50% 100%, rgba(51,209,122,0.14), transparent);">
+    <div style="max-width: 640px; margin: 0 auto; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 22px;">
+      <h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 34px; line-height: 1.25;">Check a token before it checks you.</h2>
+      <p style="margin: 0; font-size: 15px; color: #9CA3AF;">No app, no download. Reply on X with <span style="color: #F5F6F8; font-family: 'IBM Plex Mono', monospace;">@AskLongAI analyze this CA</span> and the contract address.</p>
+      <a href="https://x.com/AskLongAI" target="_blank" rel="noopener" class="adx-btn-primary" style="background: var(--accent-green); color: #04140E; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 15px; padding: 15px 30px; border-radius: 10px;">Tag @AskLongAI on X</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="width: 100%; box-sizing: border-box; padding: 40px 32px; border-top: 1px solid rgba(255,255,255,0.08); margin-top: auto;">
+    <div style="max-width: 1180px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="logo.svg" alt="Ask Long logo" style="width: 26px; height: 26px; border-radius: 8px; object-fit: cover; border: 1px solid rgba(51,209,122,0.30);">
+          <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 14px;">Ask Long</span>
+        </div>
+        <div style="display: flex; gap: 22px;">
+          <a href="docs.html" class="adx-nav-link" style="font-size: 13px;">Docs</a>
+          <a href="https://x.com/AskLongAI" target="_blank" rel="noopener" class="adx-nav-link" style="font-size: 13px;">X / Twitter</a>
+        </div>
+      </div>
+      <div style="font-size: 12px; line-height: 1.7; color: #5C6070;">Ask Long provides informational onchain analysis only and is not financial, investment or legal advice. Always verify data independently and do your own research before interacting with any token on Robinhood Chain.</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
